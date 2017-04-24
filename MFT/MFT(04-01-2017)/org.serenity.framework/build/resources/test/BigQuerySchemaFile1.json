@@ -1,0 +1,23 @@
+[{
+    "name": "fullName",
+    "type": "string",
+    "mode": "required"
+  },
+  {
+    "name": "age",
+    "type": "integer",
+    "mode": "nullable"
+  },
+  {
+    "name": "gender",
+    "type": "string",
+    "mode": "nullable"
+  },
+  {
+    "name": "city",
+    "type": "string",
+    "mode": "required"
+  }
+]
+
+

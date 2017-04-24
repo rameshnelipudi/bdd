@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.geb:geb-core:0.7.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.geb/geb-core/0.7.2/b9562232340f86d67681510e9662f91f7fb0e1d6/geb-core-0.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.geb/geb-core/0.7.2/b76ba00a7de7e53e5f671bed1584bc314384a956/geb-core-0.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

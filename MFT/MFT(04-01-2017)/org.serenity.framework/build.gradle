@@ -1,0 +1,123 @@
+group 'serenity'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'groovy'
+apply plugin: 'java'
+apply plugin: 'idea'
+apply plugin: 'net.serenity-bdd.aggregator'
+
+repositories {
+    mavenCentral()
+    jcenter()
+    mavenLocal()
+}
+
+buildscript {
+    repositories {
+        mavenLocal()
+        jcenter()
+    }
+    dependencies {
+        classpath("net.serenity-bdd:serenity-gradle-plugin:1.1.42")
+    }
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile 'com.google.apis:google-api-services-bigquery:v2-rev330-1.22.0'
+}
+
+dependencies {
+
+    def testngVersion = "6.9.10"
+    def seleniumVersion = "2.53.0"
+
+    compile 'net.serenity-bdd:serenity-core:1.1.42'
+    compile 'net.serenity-bdd:serenity-cucumber:1.1.11'
+    testCompile 'junit:junit:4.11'
+    compile 'org.assertj:assertj-core:1.7.0'
+    compile 'com.googlecode.lambdaj:lambdaj:2.3.3'
+    compile "org.gebish:geb-core:0.12.2"
+    compile "org.testng:testng:$testngVersion"
+    compile "org.seleniumhq.selenium:selenium-java:$seleniumVersion"
+    compile "org.codehaus.geb:geb-testng:0.7.2"
+    compile "org.apache.poi:poi:3.12"
+    compile "org.jsoup:jsoup:1.8.3"
+    compile "org.slf4j:slf4j-api:1.7.21"
+    compile 'org.codehaus.groovy:groovy-all:2.3.11'
+    compile "org.seleniumhq.selenium:selenium-htmlunit-driver:2.52.0"
+    compile "org.slf4j:slf4j-simple:1.7.7"
+    compile 'info.cukes:cucumber-java:1.2.5'
+    compile 'info.cukes:cucumber-core:1.2.5'
+    compile 'net.serenity-bdd:serenity-screenplay:1.2.1-rc.6'
+    compile 'de.openkeyword:autoit:0.0.15'
+    compile 'org.simplejavamail:simple-java-mail:4.1.2'
+    compile 'org.kie.modules:javax-mail-api-main:6.5.0.Final'
+    compile 'javax.mail:javax.mail-api:1.5.6'
+    compile 'org.assertj:assertj-core:3.4+'
+    compile group: 'com.googlecode.json-simple', name: 'json-simple', version: '1.1.1'
+    compile 'com.google.apis:google-api-services-datastore:v1beta2-rev33-1.22.0'
+    compile 'com.google.api-client:google-api-client:1.22.0'
+    compile 'com.google.apis:google-api-services-storage:v1-rev92-1.22.0'
+    compile group: 'com.google.apis', name: 'google-api-services-storage', version: 'v1-rev18-1.19.0'
+    compile group: 'com.google.appengine', name: 'appengine-api-1.0-sdk', version: '1.9.48'
+}
+//
+//task groovyTests (type:Test){
+//    delete 'target'
+//    outputs.upToDateWhen { false }
+//    systemProperty 'serenity.test.root', 'src/test/groovy/'
+//    systemProperty 'serenity.take.screenshots','FOR_EACH_ACTION'
+//    include '**/**GoogleRunnerSpec.class'
+//}
+//
+//task javaTests (type:Test){
+//    delete 'target'
+//    systemProperty 'webdriver.driver', 'firefox'
+//    systemProperty System.getProperty(convertPropertiesToSystemProperties())
+//    systemProperty 'webdriver.chrome.driver','C://Ramesh//ChromeDriver//chromedriver.exe'
+//    //systemProperty 'webdriver.remote.driver', 'firefox'
+//    systemProperty 'serenity.test.root', 'src/test/java/'
+//    systemProperty 'serenity.take.screenshots','FOR_EACH_ACTION'
+//    include '**/**JavaRunnerSpec.class'
+//}
+
+
+//task javaTests (type:Test){
+//    delete 'target'
+//    systemProperty 'webdriver.driver', 'firefox'
+//    systemProperty System.getProperty(convertPropertiesToSystemProperties())
+//    systemProperty 'webdriver.chrome.driver','C://Ramesh//ChromeDriver//chromedriver.exe'
+//    //systemProperty 'webdriver.remote.driver', 'firefox'
+//    systemProperty 'serenity.test.root', 'src/test/java/'
+//    systemProperty 'serenity.take.screenshots','FOR_EACH_ACTION'
+//    include '**/**JavaRunnerSpec.class'
+//}
+//
+
+
+
+task MFTTests(type: Test, dependsOn: [classes, testClasses])  {
+    outputs.upToDateWhen { false }
+    doFirst{
+        delete 'target'
+    }
+    systemProperties System.properties
+    include '**/**GCPTestRunner.class'
+}
+
+/*public void convertPropertiesToSystemProperties() {
+    String rootDir = new File(".").getCanonicalPath() *//*Absolute Path*//*
+    String projectPropertiesPath = rootDir + "/src/main/resources/project.properties".replace('/', File.separator)
+    Properties przoperties = new Properties()
+    properties.load(new FileInputStream(projectPropertiesPath))
+    properties.each { key, value ->
+        if (System.getProperty(key) == null) {
+            System.setProperty(key, value);
+        }
+    }
+}*/
+
+gradle.startParameter.continueOnFailure = true

@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Scenario: verify data feed request approval" tests="2" skipped="0" failures="0" errors="0" timestamp="2016-12-22T11:22:52" hostname="HW1438" time="4.945">
+  <properties/>
+  <testcase name="Given I  read emails which are ready for review and approve against dataFeed requests" classname="Scenario: verify data feed request approval" time="0.0"/>
+  <testcase name="classMethod" classname="Scenario: verify data feed request approval" time="9.344"/>
+  <system-out><![CDATA[Total messeges1
+targetMesseges-4
+]]></system-out>
+  <system-err><![CDATA[[Test worker] INFO net.serenitybdd.core.Serenity - 
+ _____ _____ ____ _____   ____ _____  _    ____ _____ _____ ____  
+|_   _| ____/ ___|_   _| / ___|_   _|/ \  |  _ \_   _| ____|  _ \ 
+  | | |  _| \___ \ | |   \___ \ | | / _ \ | |_) || | |  _| | | | |
+  | | | |___ ___) || |    ___) || |/ ___ \|  _ < | | | |___| |_| |
+  |_| |_____|____/ |_|   |____/ |_/_/   \_\_| \_\|_| |_____|____/ 
+                                                                  
+
+TEST STARTED: verify data feed request approval
+-------------------------------------------------------------------
+java.lang.IndexOutOfBoundsException: message number < 1
+	at com.sun.mail.imap.IMAPFolder.checkRange(IMAPFolder.java:493)
+	at com.sun.mail.imap.IMAPFolder.getMessage(IMAPFolder.java:1770)
+	at javax.mail.Folder.getMessages(Folder.java:910)
+	at Pages.ReadDataFeedRequestEmails.ReadEmails(ReadDataFeedRequestEmails.java:71)
+	at Runners.ReviewEmailsStepDefs.iReadEmailsWhichAreReadyForReviewAndApproveAgainstDataFeedRequests(ReviewEmailsStepDefs.java:18)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at cucumber.runtime.Utils$1.call(Utils.java:40)
+	at cucumber.runtime.Timeout.timeout(Timeout.java:16)
+	at cucumber.runtime.Utils.invoke(Utils.java:34)
+	at cucumber.runtime.java.JavaStepDefinition.execute(JavaStepDefinition.java:38)
+	at cucumber.runtime.StepDefinitionMatch.runStep(StepDefinitionMatch.java:37)
+	at cucumber.runtime.Runtime.runStep(Runtime.java:300)
+	at cucumber.runtime.model.StepContainer.runStep(StepContainer.java:44)
+	at cucumber.runtime.model.StepContainer.runSteps(StepContainer.java:39)
+	at cucumber.runtime.model.CucumberScenario.run(CucumberScenario.java:44)
+	at cucumber.runtime.junit.ExecutionUnitRunner.run(ExecutionUnitRunner.java:91)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:63)
+	at cucumber.runtime.junit.FeatureRunner.runChild(FeatureRunner.java:18)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.runtime.junit.FeatureRunner.run(FeatureRunner.java:70)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:93)
+	at cucumber.api.junit.Cucumber.runChild(Cucumber.java:37)
+	at org.junit.runners.ParentRunner$3.run(ParentRunner.java:290)
+	at org.junit.runners.ParentRunner$1.schedule(ParentRunner.java:71)
+	at org.junit.runners.ParentRunner.runChildren(ParentRunner.java:288)
+	at org.junit.runners.ParentRunner.access$000(ParentRunner.java:58)
+	at org.junit.runners.ParentRunner$2.evaluate(ParentRunner.java:268)
+	at org.junit.runners.ParentRunner.run(ParentRunner.java:363)
+	at cucumber.api.junit.Cucumber.run(Cucumber.java:98)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.runTestClass(JUnitTestClassExecuter.java:114)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassExecuter.execute(JUnitTestClassExecuter.java:57)
+	at org.gradle.api.internal.tasks.testing.junit.JUnitTestClassProcessor.processTestClass(JUnitTestClassProcessor.java:66)
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.processTestClass(SuiteTestClassProcessor.java:51)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:32)
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:93)
+	at com.sun.proxy.$Proxy2.processTestClass(Unknown Source)
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.processTestClass(TestWorker.java:109)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:35)
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24)
+	at org.gradle.internal.remote.internal.hub.MessageHub$Handler.run(MessageHub.java:377)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:54)
+	at org.gradle.internal.concurrent.StoppableExecutorImpl$1.run(StoppableExecutorImpl.java:40)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1142)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:617)
+	at java.lang.Thread.run(Thread.java:745)
+]]></system-err>
+</testsuite>

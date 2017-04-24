@@ -1,0 +1,1 @@
+1. Put Runner Class and Step Definition Classes under same Package or else the test cases will skip.

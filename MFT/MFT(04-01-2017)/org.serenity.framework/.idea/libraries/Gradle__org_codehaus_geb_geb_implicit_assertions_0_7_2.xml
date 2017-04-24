@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="Gradle: org.codehaus.geb:geb-implicit-assertions:0.7.2">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.geb/geb-implicit-assertions/0.7.2/316ba814efb6cb6af5eca4eed3f63b5c31e24ce3/geb-implicit-assertions-0.7.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.codehaus.geb/geb-implicit-assertions/0.7.2/41e3e596f090fa71ac61f7f04f1a6433031845f0/geb-implicit-assertions-0.7.2-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>
